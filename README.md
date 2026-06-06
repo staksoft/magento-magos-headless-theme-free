@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/staksoft/magento-magos-headless-theme-free/main/public/images/logo.svg" alt="Aetheris - Premium Magento Headless Theme" width="200" />
+
   <h1>Aetheris — Free Next.js Headless Theme for Magento 2 & Mage-OS</h1>
   <p>The fastest, most SEO-optimized open-source headless frontend for Magento and Mage-OS.</p>
   
