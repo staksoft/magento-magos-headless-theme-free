@@ -16,7 +16,7 @@ Traditional Magento 2 Luma themes are notoriously slow and difficult to optimize
 
 By decoupling the frontend from the Magento backend via standard GraphQL, this theme achieves a **97/100 Lighthouse Performance Score** and **100/100 SEO Score** right out of the box.
 
-![Theme Preview](selection.png)
+![Theme Preview](screenshosts/homepage.png)
 *(Pictured: The Aetheris Homepage Category Grid)*
 
 ## ✨ Key Features
@@ -27,17 +27,19 @@ By decoupling the frontend from the Magento backend via standard GraphQL, this t
 - **Headless Checkout:** Fully integrated slide-out cart and multi-step headless checkout process.
 
 ### 📸 Screenshots
-<div style="display: flex; gap: 10px;">
-  <img src="checkout_step1.png" width="45%" alt="Cart Drawer" />
-  <img src="checkout_step2.png" width="45%" alt="Checkout Step" />
-</div>
-<br/>
-<div style="display: flex; gap: 10px;">
-  <img src="checkout_step3.png" width="45%" alt="Payment Step" />
-  <img src="checkout_success.png" width="45%" alt="Success Page" />
-</div>
 
-*(Note: Add your 97/100 Lighthouse Score screenshot as `lighthouse-score.png` to the repository to display it here!)*
+#### Lighthouse 97/100 Performance
+![Lighthouse Score](screenshosts/light-house-page-97.png)
+
+#### Storefront Preview
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <img src="screenshosts/category-list-page.png" width="45%" alt="Category Page" />
+  <img src="screenshosts/product-details-page.png" width="45%" alt="Product Details" />
+  <img src="screenshosts/add-to-cart-sidebar-veiw.png" width="45%" alt="Cart Drawer" />
+  <img src="screenshosts/checkout-step1.png" width="45%" alt="Checkout Step 1" />
+  <img src="screenshosts/checkout-payment-step.png" width="45%" alt="Checkout Payment" />
+  <img src="screenshosts/order-compete-page.png" width="45%" alt="Order Success" />
+</div>
 
 ---
 
