@@ -1,4 +1,5 @@
 <div align="center">
+  <img src="screenshosts/logo.png" alt="Staksoft Logo" width="200" />
 
   <h1>Aetheris — Free Next.js Headless Theme for Magento 2 & Mage-OS</h1>
   <p>The fastest, most SEO-optimized open-source headless frontend for Magento and Mage-OS.</p>
