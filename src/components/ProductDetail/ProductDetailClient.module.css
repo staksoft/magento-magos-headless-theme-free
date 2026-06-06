@@ -1,0 +1,247 @@
+.container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 4% 100px 4%;
+}
+
+.galleryCol {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mainImageWrapper {
+  width: 100%;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  position: relative;
+}
+
+.mainImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.mainImage:hover {
+  transform: scale(1.03);
+}
+
+.thumbsRow {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+}
+
+.thumbWrapper {
+  width: 70px;
+  height: 90px;
+  border: 1px solid var(--border-light);
+  cursor: pointer;
+  overflow: hidden;
+  opacity: 0.7;
+  transition: var(--transition-smooth);
+}
+
+.thumbWrapper:hover, .thumbActive {
+  opacity: 1;
+  border-color: var(--accent-gold);
+}
+
+.thumbImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detailsCol {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.header {
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.collectionTag {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.price {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.shortDesc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+.optionsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.optionGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.optionLabel {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-secondary);
+}
+
+.swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.swatchBtn {
+  border: 1px solid var(--border-light);
+  padding: 8px 18px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  background: transparent;
+  transition: var(--transition-smooth);
+  font-family: var(--font-display);
+  letter-spacing: 0.05em;
+}
+
+.swatchBtn:hover {
+  border-color: var(--text-primary);
+}
+
+.swatchActive {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  background: hsla(43, 74%, 66%, 0.05);
+  box-shadow: var(--shadow-gold);
+}
+
+.purchaseSection {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.qtySelector {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-light);
+  height: 48px;
+}
+
+.qtyBtn {
+  width: 40px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.02);
+  transition: var(--transition-smooth);
+}
+
+.qtyBtn:hover {
+  background: var(--surface-hover);
+  color: var(--accent-gold);
+}
+
+.qtyValue {
+  width: 50px;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.tabsSection {
+  margin-top: 40px;
+}
+
+.tabsHeader {
+  display: flex;
+  gap: 30px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.tabTitle {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 12px 0;
+  cursor: pointer;
+  color: var(--text-muted);
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.tabTitleActive {
+  color: var(--text-primary);
+}
+
+.tabTitleActive::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--accent-gold);
+}
+
+.tabContent {
+  padding-top: 24px;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  font-weight: 300;
+}
+
+.tabContent ul, .tabContent ol {
+  padding-left: 20px;
+  margin: 16px 0;
+}
+
+@media (max-width: 992px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}

@@ -1,0 +1,223 @@
+.headerWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: var(--transition-smooth);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 4%;
+  height: 80px;
+  background: rgba(11, 15, 25, 0.7);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid var(--border-light);
+  transition: var(--transition-smooth);
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+}
+
+.logo span {
+  color: var(--accent-gold);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.navLink {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  position: relative;
+  padding: 6px 0;
+  cursor: pointer;
+}
+
+.navLink:hover {
+  color: var(--text-primary);
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent-gold);
+  transition: var(--transition-smooth);
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.searchBtn, .cartBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.searchBtn:hover, .cartBtn:hover {
+  color: var(--accent-gold);
+  transform: translateY(-1px);
+}
+
+.cartBadge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--accent-gold);
+  color: var(--bg-secondary);
+  font-size: 0.7rem;
+  font-weight: 700;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px var(--accent-gold-glow);
+}
+
+/* Search Overlay */
+.searchOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(7, 9, 15, 0.95);
+  backdrop-filter: var(--glass-blur);
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10vh;
+  animation: fadeIn 0.3s forwards;
+}
+
+.searchContainer {
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+}
+
+.searchInput {
+  width: 100%;
+  border-bottom: 2px solid var(--border-light);
+  padding: 16px 0;
+  font-size: 1.5rem;
+  font-family: var(--font-display);
+  color: var(--text-primary);
+  background: transparent;
+  transition: var(--transition-smooth);
+}
+
+.searchInput:focus {
+  border-bottom-color: var(--accent-gold);
+}
+
+.closeSearch {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  font-size: 2rem;
+  color: var(--text-primary);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.closeSearch:hover {
+  color: var(--accent-gold);
+  transform: rotate(90deg);
+}
+
+.searchResults {
+  margin-top: 40px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 50vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.searchResultItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px;
+  border: 1px solid var(--border-light);
+  background: rgba(255, 255, 255, 0.02);
+  transition: var(--transition-smooth);
+}
+
+.searchResultItem:hover {
+  border-color: var(--accent-gold);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.searchResultThumb {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  background: var(--surface);
+}
+
+.searchResultDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.searchResultName {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.searchResultPrice {
+  font-size: 0.85rem;
+  color: var(--accent-gold);
+}
+
+/* Mobile responsive menu */
+@media (max-width: 768px) {
+  .nav {
+    display: none; /* In a full app, we would make a burger menu */
+  }
+}
